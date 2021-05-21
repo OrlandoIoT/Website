@@ -35,6 +35,6 @@ jobs:
         run: git config user.name "Github Actions Runner"
       
       - name: Deploy site
-        run: ng deploy --cname=orlandoiot.com --no-silent
+        run: ng deploy --cname=orlandoiot.com --no-silent --name=gomjabar6
         env:
           GITHUB_TOKEN: ${{ secrets.DEPLOY_GH_PAGES_TOKEN }}
