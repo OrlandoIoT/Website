@@ -1,5 +1,17 @@
-<nav class="navbar navbar-light bg-light">
-  <span class="navbar-brand mb-0 h1">OrlandoIoT</span>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="">
+      <img src="assets/OrlandoIoTLogo.svg" height="30" alt="logo" class="px-2">
+      Orlando<strong class="text-primary">IoT</strong>
+    </a>
+    <a style="background-color:#4A154B; border-radius: 10px; font-size: 1rem;" class="p-2 text-white navbar-brand" target="_blank" href="https://join.slack.com/t/orlandoiot/shared_invite/zt-qm872vsl-~70QYTujCm5~RBfi8sKkww">
+      <img src="assets/SlackIcon.png" height="25" alt="slack logo" class="pr-2">
+      Join us on slack
+    </a>
+  </div>
 </nav>
 
-<router-outlet></router-outlet>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
