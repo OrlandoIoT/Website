@@ -13,23 +13,20 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  deploy:
     runs-on: ubuntu-latest
+    steps: |
+      - uses: actions/checkout@v1
 
-  steps: |
-    - uses: actions/checkout@v1
-    
-    - name: Setup NodeJS LTS
-      uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
-        
-    - name: Install dependencies
-      run: npm ci
+      - name: Setup NodeJS LTS
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
 
-    - name: Deploy site
-      run: ng deploy --cname=example.org
-      env:
-        GH_TOKEN: ${{ secrets.DEPLOY_GH_PAGES_TOKEN }}
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Deploy site
+        run: ng deploy --cname=orlandoiot.com
+        env:
+          GH_TOKEN: ${{ secrets.DEPLOY_GH_PAGES_TOKEN }}
