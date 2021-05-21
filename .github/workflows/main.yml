@@ -27,13 +27,7 @@ jobs:
       
       - name: Install Angular CLI
         run: npm i -g @angular/cli
-      
-      - name: Setup Git
-        run: git config user.email "garrett@orlandoiot.com"
-        
-      - name: Setup Git
-        run: git config user.name "Github Actions Runner"
-      
+
       - name: Build
         run: ng build
       
@@ -41,4 +35,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./dist/OrlandoIoT
+          cname: orlandoiot.com
