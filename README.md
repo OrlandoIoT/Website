@@ -1,6 +1,14 @@
 # OrlandoIoT
 
+This is the main website for OrlandoIoT!
+
+Master branch will build and deploy into the Github page automatically.
+Master branch is protected and all changes must be merged via new branch with pull request.
+
+# Angular Stuff Below
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
+
 
 ## Development server
 
