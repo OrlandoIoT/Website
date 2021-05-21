@@ -34,7 +34,11 @@ jobs:
       - name: Setup Git
         run: git config user.name "Github Actions Runner"
       
+      - name: Build
+        run: ng build
+      
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
