@@ -29,6 +29,6 @@ jobs:
         run: npm i -g @angular/cli
       
       - name: Deploy site
-        run: ng deploy --cname=orlandoiot.com
+        run: ng deploy --cname=orlandoiot.com --no-silent
         env:
           GH_TOKEN: ${{ secrets.DEPLOY_GH_PAGES_TOKEN }}
